@@ -3,7 +3,7 @@ class DailyRoutineJob < ActiveJob::Base
 
   def perform
     # call tommorrows job
-    DailyRoutineJob.set(wait_until: Time.now + 1.second).perform_later
+    DailyRoutineJob.set(wait_until: Time.now + 1.day).perform_later
 
 	# DO YOU STUFFF
 
